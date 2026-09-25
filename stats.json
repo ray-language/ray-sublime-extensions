@@ -1,19 +1,19 @@
 {
-  "generated": "2026-09-25T21:05:28Z",
+  "generated": "2026-09-25T21:13:35Z",
   "extensions": {
     "rayala.hello": {
       "downloads": 9,
       "stars": 0,
       "up": 0,
       "down": 0,
-      "discussion": ""
+      "discussion": "https://github.com/ray-language/ray-sublime-extensions/discussions/4"
     },
     "rayala.todos": {
       "downloads": 9,
       "stars": 0,
       "up": 0,
       "down": 0,
-      "discussion": ""
+      "discussion": "https://github.com/ray-language/ray-sublime-extensions/discussions/5"
     }
   }
 }
