@@ -1,3 +1,52 @@
 {
-  "extensions": []
+  "extensions": [
+    {
+      "id": "rayala.hello",
+      "name": "Hello",
+      "description": "An example extension: the Hello language, its language server, and a greeting tool for the agent.",
+      "publisher": "rayala",
+      "homepage": "https://github.com/ray-language/ray-sublime/tree/main/examples/extensions/rayala.hello",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "engines": "^0.1.0",
+          "date": "2026-09-25",
+          "permissions": [
+            "process"
+          ],
+          "artifacts": {
+            "macos-aarch64": {
+              "url": "https://github.com/ray-language/ray-sublime-extensions/releases/download/rayala.hello-0.1.0/rayala.hello-0.1.0-macos-aarch64.zip",
+              "sha256": "21fc33154b61252119aedb5027abb0cdae91b37d883e824623aa66f46c6d0bc3",
+              "size": 759561
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "rayala.todos",
+      "name": "TODOs",
+      "description": "An example service in Node: finds TODO and FIXME comments, marks them, and tells the agent about them.",
+      "publisher": "rayala",
+      "homepage": "https://github.com/ray-language/ray-sublime/tree/main/examples/extensions/rayala.todos",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "engines": "^0.1.0",
+          "date": "2026-09-25",
+          "permissions": [
+            "process"
+          ],
+          "artifacts": {
+            "any": {
+              "url": "https://github.com/ray-language/ray-sublime-extensions/releases/download/rayala.todos-0.1.0/rayala.todos-0.1.0.zip",
+              "sha256": "5673cddd9d7adfc2df7b97c592fce3008b6bfc28b6d80825d9ea55e000d84af4",
+              "size": 2633
+            }
+          }
+        }
+      ]
+    }
+  ]
 }
