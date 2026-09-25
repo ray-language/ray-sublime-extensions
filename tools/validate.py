@@ -9,7 +9,7 @@ said, one a line.
 import os
 import sys
 
-from common import artifact, entries, shape
+from common import artifact, asset, assets_of, entries, shape
 
 
 def main(argv):
@@ -25,6 +25,8 @@ def main(argv):
         for v in e["versions"]:
             for key, a in v["artifacts"].items():
                 problems += artifact(name, e, v, key, a)
+        for where, a, kind, _limit in assets_of(e):
+            problems += asset(name, where, a, kind)
     for p in problems:
         print(p)
     if not problems:

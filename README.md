@@ -43,6 +43,22 @@ this repo's by default).
 }
 ```
 
+An entry may also show itself:
+
+```json
+  "icon": { "url": "https://…/icon.png", "sha256": "…", "size": 18544 },
+  "screenshots": [
+    { "url": "https://…/marked.png", "sha256": "…", "size": 37554, "caption": "The TODOs, marked in the file" }
+  ],
+  "readme": { "url": "https://…/README.md", "sha256": "…", "size": 1200 }
+```
+
+PNG, JPEG or WebP only — never SVG, which can run script — told by the file's
+first bytes; an icon or a README up to 256 KB, a screenshot up to 1 MB, at
+most five. The editor fetches them itself, checks each against its sha256, and
+never lets a README's own images be fetched: looking at an extension does not
+tell anyone who is looking.
+
 Keep old versions in the list: an editor that cannot run the newest one
 installs the newest it can.
 

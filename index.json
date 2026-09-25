@@ -6,7 +6,46 @@
       "description": "An example extension: the Hello language, its language server, and a greeting tool for the agent.",
       "publisher": "rayala",
       "homepage": "https://github.com/ray-language/ray-sublime/tree/main/examples/extensions/rayala.hello",
+      "icon": {
+        "url": "https://github.com/ray-language/ray-sublime-extensions/releases/download/rayala.hello-0.2.0/icon.png",
+        "sha256": "cf64bcaf8ba68a2d1641c67ec54b604a8b416f131d7daf66001d9efe9ed457d2",
+        "size": 18544
+      },
+      "screenshots": [
+        {
+          "url": "https://github.com/ray-language/ray-sublime-extensions/releases/download/rayala.hello-0.2.0/problems.png",
+          "sha256": "bb17992b071b20662aead74e22359a7fafc0cee1a8bae99d682d2c4b034e653c",
+          "size": 29286,
+          "caption": "Its language server marks a line whose verb is not greet or wave"
+        },
+        {
+          "url": "https://github.com/ray-language/ray-sublime-extensions/releases/download/rayala.hello-0.2.0/agent.png",
+          "sha256": "ac4e63dd913f02d67304cd430b5738e5f06ac1ecf5068c9ded2fd5178e85c900",
+          "size": 64174,
+          "caption": "The agent greeting someone with its greet tool"
+        }
+      ],
+      "readme": {
+        "url": "https://github.com/ray-language/ray-sublime-extensions/releases/download/rayala.hello-0.2.0/README.md",
+        "sha256": "8291d68e204ae2157d7383bf39e756dcd3a192f2553fb2bd39629da6899743be",
+        "size": 832
+      },
       "versions": [
+        {
+          "version": "0.2.0",
+          "engines": "^0.1.0",
+          "date": "2026-09-25",
+          "permissions": [
+            "process"
+          ],
+          "artifacts": {
+            "macos-aarch64": {
+              "url": "https://github.com/ray-language/ray-sublime-extensions/releases/download/rayala.hello-0.2.0/rayala.hello-0.2.0-macos-aarch64.zip",
+              "sha256": "806e2fa5121706b4391687bde908ca59418532e8a86d6af7d5edb5d767440ce3",
+              "size": 777735
+            }
+          }
+        },
         {
           "version": "0.1.0",
           "engines": "^0.1.0",
@@ -30,7 +69,46 @@
       "description": "An example service in Node: finds TODO and FIXME comments, marks them, and tells the agent about them.",
       "publisher": "rayala",
       "homepage": "https://github.com/ray-language/ray-sublime/tree/main/examples/extensions/rayala.todos",
+      "icon": {
+        "url": "https://github.com/ray-language/ray-sublime-extensions/releases/download/rayala.todos-0.2.0/icon.png",
+        "sha256": "e1321d2b2b1823661c00adbe670ab4a54679d481ea94656e47759a3fc3c8c81a",
+        "size": 16782
+      },
+      "screenshots": [
+        {
+          "url": "https://github.com/ray-language/ray-sublime-extensions/releases/download/rayala.todos-0.2.0/marked.png",
+          "sha256": "27cd25e60ebfbb9804609d35d4e5095641a74dce8fc64c7850361d30a4c80899",
+          "size": 37554,
+          "caption": "The TODOs of a file, marked as problems, and counted in the status bar"
+        },
+        {
+          "url": "https://github.com/ray-language/ray-sublime-extensions/releases/download/rayala.todos-0.2.0/agent.png",
+          "sha256": "f9877233ab041db8034bbc33848db79e8a24b1d5fa8cea241d8c09772ea950a4",
+          "size": 76087,
+          "caption": "The agent asked with @todos, using list_todos"
+        }
+      ],
+      "readme": {
+        "url": "https://github.com/ray-language/ray-sublime-extensions/releases/download/rayala.todos-0.2.0/README.md",
+        "sha256": "8a5e88e43fb08605a9a03ca7791bb4ab5d13b9ebc39d8235ce8102071c700a71",
+        "size": 801
+      },
       "versions": [
+        {
+          "version": "0.2.0",
+          "engines": "^0.1.0",
+          "date": "2026-09-25",
+          "permissions": [
+            "process"
+          ],
+          "artifacts": {
+            "any": {
+              "url": "https://github.com/ray-language/ray-sublime-extensions/releases/download/rayala.todos-0.2.0/rayala.todos-0.2.0.zip",
+              "sha256": "b8eab07bac1af0cbc6503bc6dd85852d1fe39dd2bee6444d5887e70b574e9c1e",
+              "size": 19223
+            }
+          }
+        },
         {
           "version": "0.1.0",
           "engines": "^0.1.0",
