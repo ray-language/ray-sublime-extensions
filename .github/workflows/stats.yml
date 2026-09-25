@@ -1,0 +1,37 @@
+name: stats
+
+# What people make of each extension — downloads, stars, votes — counted once
+# a day and written to stats.json. Kept apart from the entries: those are
+# reviewed in pull requests, these are nobody's to review.
+on:
+  schedule:
+    - cron: "17 4 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["extensions/**"]
+
+permissions:
+  contents: write
+  discussions: write
+
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: count
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 tools/stats.py --create
+      - name: keep what changed
+        run: |
+          if git diff --quiet -- stats.json; then echo "nothing changed"; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add stats.json
+          git commit -m "stats: $(date -u +%Y-%m-%d)"
+          git push

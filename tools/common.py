@@ -15,6 +15,10 @@ VERSION = re.compile(r"^\d+\.\d+\.\d+([-+].*)?$")
 KEYS = {"any", "macos-aarch64", "macos-x86_64", "linux-x86_64", "linux-aarch64", "windows-x86_64"}
 SHA = re.compile(r"^[0-9a-f]{64}$")
 
+# What an extension is for, to filter by. A fixed list, so they mean the same
+# in every entry.
+CATEGORIES = {"languages", "linters", "formatters", "agent", "git", "themes", "snippets", "tools"}
+
 # What an entry may show of itself, and how big each may be.
 ICON_MAX = 262144
 SCREENSHOT_MAX = 1048576
@@ -78,6 +82,13 @@ def shape(name, e):
         problems.append(f"{name}: the file must be named {ident}.json")
     if not e.get("name"):
         problems.append(f"{name}: no name")
+    categories = e.get("categories", [])
+    if not isinstance(categories, list) or not categories:
+        problems.append(f"{name}: categories must be a non-empty list, from: {', '.join(sorted(CATEGORIES))}")
+    else:
+        for c in categories:
+            if c not in CATEGORIES:
+                problems.append(f"{name}: '{c}' is not a category ({', '.join(sorted(CATEGORIES))})")
     if len(e.get("screenshots", [])) > 5:
         problems.append(f"{name}: at most 5 screenshots")
     for where, a, _kind, limit in assets_of(e):

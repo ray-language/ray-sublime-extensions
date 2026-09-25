@@ -43,6 +43,14 @@ this repo's by default).
 }
 ```
 
+Every entry names its **categories**, one or more of: `languages`, `linters`,
+`formatters`, `agent`, `git`, `themes`, `snippets`, `tools` — what the editor
+filters by:
+
+```json
+  "categories": ["linters", "agent"],
+```
+
 An entry may also show itself:
 
 ```json
@@ -69,6 +77,16 @@ and before downloading anything it shows what the extension asks for. What it
 downloads is checked against this index — size, sha256, id, version,
 permissions — before anything is unpacked. Nothing is updated without the
 reader taking the update.
+
+## What people make of it
+
+Once a day, `tools/stats.py` counts for every extension its downloads (of the
+zips its versions name, when they are GitHub release assets), the stars of its
+homepage's repository, and the 👍 and 👎 on its discussion here — one per
+extension, in *Show and tell*, titled with its id, opened by the same job when
+it is missing. It writes them to `stats.json`, apart from the entries: those
+are reviewed in pull requests, these change every day. The editor sorts by them
+and shows them; voting is reacting to the discussion.
 
 ## Checking locally
 

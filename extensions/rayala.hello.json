@@ -4,6 +4,10 @@
   "description": "An example extension: the Hello language, its language server, and a greeting tool for the agent.",
   "publisher": "rayala",
   "homepage": "https://github.com/ray-language/ray-sublime/tree/main/examples/extensions/rayala.hello",
+  "categories": [
+    "languages",
+    "agent"
+  ],
   "icon": {
     "url": "https://github.com/ray-language/ray-sublime-extensions/releases/download/rayala.hello-0.2.0/icon.png",
     "sha256": "cf64bcaf8ba68a2d1641c67ec54b604a8b416f131d7daf66001d9efe9ed457d2",

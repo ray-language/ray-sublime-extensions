@@ -4,6 +4,10 @@
   "description": "An example service in Node: finds TODO and FIXME comments, marks them, and tells the agent about them.",
   "publisher": "rayala",
   "homepage": "https://github.com/ray-language/ray-sublime/tree/main/examples/extensions/rayala.todos",
+  "categories": [
+    "linters",
+    "agent"
+  ],
   "icon": {
     "url": "https://github.com/ray-language/ray-sublime-extensions/releases/download/rayala.todos-0.2.0/icon.png",
     "sha256": "e1321d2b2b1823661c00adbe670ab4a54679d481ea94656e47759a3fc3c8c81a",
